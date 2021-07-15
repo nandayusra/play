@@ -105,15 +105,15 @@ class App extends Component {
     //check unique count, if count is 0, game is lost, else game is won
     const uniqueCount = positions.length - new Set(positions).size;
     if (uniqueCount > 0) {
-      let price = "$10";
+      let price = "10 BSX";
       // all are the same, price money is $100
       if (uniqueCount + 1 === positions.length) {
-        price = "$100";
+        price = "100 BSX";
       } else {
         //find consecutive, if found, price money is $10
         positions.forEach((el, i) => {
           if (positions[i] === positions[i - 1] || positions[0] === positions[positions.length - 1]) {
-            price = "$20";
+            price = "20 BSX";
           }
         });
       }
